@@ -3,7 +3,7 @@
 #   kube_config
 #   install_name
 #   helm_chart
-#   template: true  # Convert j2 template to yaml 
+#   template: true  # Convert j2 template to yaml
 #   helm_values: j2 template or yaml helm file
 #   helm_strings: Key value pairs as per --set-strings option
 #   helm_namespace: default if not specified
@@ -14,9 +14,9 @@
 - name: Convert values template to values file
   template:
     src: '{{helm_values}}'
-    dest: '{{helm_values | dirname}}/values.yaml'  # CAUTION: Writes in the same location. Name repeated below. 
-  when: is_template == true  
-  
+    dest: '{{helm_values | dirname}}/values.yaml' # CAUTION: Writes in the same location. Name repeated below.
+  when: is_template == true
+
 - name: 'Check if {{install_name}} is already running'
   command: '{{helm_cli_path}}/helm --kubeconfig {{kube_config}} list -n {{helm_namespace}} -q'
   register: out
@@ -27,12 +27,12 @@
 
 - name: install chart
   block:
-  - name: 'Install chart {{install_name}}'
-    command: '{{helm_cli_path}}/helm --kubeconfig {{kube_config}} install {{install_name}} {{helm_chart}} -f {{helm_values | dirname}}/values.yaml -n {{helm_namespace}} --create-namespace --set-string dummy=value,{{helm_strings}} --wait --timeout 20m0s'
-    when: install_name not in out.stdout.split()
-    register: helm_out 
-  
-  - debug:
-      msg: '{{helm_out.stdout}}'
+    - name: 'Install chart {{install_name}}'
+      command: '{{helm_cli_path}}/helm --kubeconfig {{kube_config}} install {{install_name}} {{helm_chart}} -f {{helm_values | dirname}}/values.yaml -n {{helm_namespace}} --create-namespace --set-string dummy=value,{{helm_strings}} --wait --timeout 120m0s'
+      when: install_name not in out.stdout.split()
+      register: helm_out
+
+    - debug:
+        msg: '{{helm_out.stdout}}'
 
   when: install_name not in out.stdout.split()

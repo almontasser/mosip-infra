@@ -6,13 +6,12 @@
 #     githubuser
 #     githubpassword
 
-- name: git checkout 
-  expect: 
+- name: git checkout
+  expect:
     command: 'git clone -b {{version}} -q {{repo_path}} {{repo_dest}}'
     responses:
       Username: '{{githubuser}}'
       Password: '{{githubpassword}}'
     timeout: 600
   ignore_errors: yes
-  no_log: true
-
+  #no_log: true
