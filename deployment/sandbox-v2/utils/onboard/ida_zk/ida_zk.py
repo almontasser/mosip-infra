@@ -36,7 +36,7 @@ def args_parse():
 
 def main():
 
-    init_logger('./out.log')
+    init_logger('ida_kz', 'w', './out.log')
 
     args =  args_parse() 
     if args.server:
