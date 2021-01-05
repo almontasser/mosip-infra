@@ -12,6 +12,6 @@
     responses:
       Username: '{{githubuser}}'
       Password: '{{githubpassword}}'
-    timeout: 600
+    timeout: 3600
   ignore_errors: yes
   #no_log: true
