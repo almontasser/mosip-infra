@@ -1,4 +1,4 @@
-server = 'http://mz.ingress:30080/'
+server = 'https://console.sb'
 ssl_verify = False
 
 db_user = 'postgres'
