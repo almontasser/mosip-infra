@@ -90,7 +90,7 @@ def main():
             add_user_to_masterdb(conf.csv_users)
     except:
         formatted_lines = traceback.format_exc()
-        myprint(formatted_lines)
+        # myprint(formatted_lines)
         sys.exit(1)
 
     sys.exit(0)
