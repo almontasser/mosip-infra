@@ -1,4 +1,4 @@
-server = 'https://console.sb' 
+server = 'http://console.sb' 
 ssl_verify=False
 
 db_user = 'postgres'
