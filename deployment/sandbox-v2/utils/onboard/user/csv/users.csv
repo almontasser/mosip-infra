@@ -1,3 +1,0 @@
-realm_id,user_id,pwd,email,first_name,last_name,rid,regcntr_id,zone_id,roles
-mosip,mahmoud,mahmoud,mahmoud@yx.com,Super,Admin,,10001,NTH,GLOBAL_ADMIN MASTERDATA_ADMIN ZONAL_ADMIN REGISISTRATION_ADMIN REGISISTRATION_OFFICER REGISISTRATION_OPERATOR REGISISTRATION_PROCESSOR REGISISTRATION_SUPERVISOR
-

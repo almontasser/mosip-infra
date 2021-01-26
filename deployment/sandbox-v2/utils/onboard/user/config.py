@@ -9,5 +9,3 @@ db_port = '30090'
 keycloak_admin = 'admin'
 keycloak_pwd = 'admin'
 
-csv_users = 'csv/users.csv'
-csv_clients = 'csv/clients.csv'
