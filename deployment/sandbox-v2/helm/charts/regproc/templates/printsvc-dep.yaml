@@ -40,7 +40,7 @@ spec:
         - name: verticle-port
           containerPort: {{ .Values.services.printsvc.ports.containerPort }}
 
-        {{- include "logger.mount" .  | indent 8}}
+        # {{- include "logger.mount" .  | indent 8}}
 
         readinessProbe:
           httpGet:
