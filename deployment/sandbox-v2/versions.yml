@@ -79,6 +79,8 @@ versions:
         'regproc-message-sender-stage': 'mosipid/registration-processor-message-sender-stage:1.1.3'
       print:
         'regproc-printing-stage': 'mosipid/registration-processor-printing-stage:1.1.3'
+      printsvc:
+        'regproc-print-service': 'mosipid/registration-processor-print-service:1.1.3'
       trans:
         'regproc-registration-transaction-service': 'mosipid/registration-processor-registration-transaction-service:1.1.3'
       reprocess:
