@@ -1,5 +1,5 @@
-server = 'https://minibox.mosip.net' 
-ssl_verify=True
+server = 'https://console.sb' 
+ssl_verify=False
 
 client_id = 'mosip-ida-client'
 client_pwd =  'abc123'

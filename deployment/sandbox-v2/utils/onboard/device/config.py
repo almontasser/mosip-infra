@@ -1,5 +1,5 @@
-server = 'https://minibox.mosip.net' 
-ssl_verify=True
+server = 'https://console.sb' 
+ssl_verify=False
 
 db_user = 'postgres'
 db_pwd = 'mosip123'
