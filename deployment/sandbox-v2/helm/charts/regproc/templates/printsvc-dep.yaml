@@ -55,6 +55,7 @@ spec:
 #          initialDelaySeconds: {{ .Values.probe.initialDelay }} 
 #          periodSeconds: {{ .Values.probe.period }} 
 #
-      {{- include "logger.sidecar" .  | indent 6}}
+      # {{- include "logger.sidecar" .  | indent 6}}
 
-      {{- include "logger.volume" .  | indent 6}}
+      # {{- include "logger.volume" .  | indent 6}}
+      
